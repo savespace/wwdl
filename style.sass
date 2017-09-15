@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css?family=Lato')
+
+* 
+	box-sizing: border-box
+
+body
+	margin: 0
+	font-family: 'Lato'
+
+section .container
+	margin: 50px auto
+
+.padding
+	padding: 50px 0
+
+.container
+	width: 100%
+	max-width: 1200px
+	margin 0 auto
+
+.row:before,
+.row:after
+	content: ""
+	display: table
+
+.row:after
+	clear: both
+
+// RAMKA
+=translate($posX, $posY)
+	-ms-transform:      translate($posX, $posY)
+	-webkit-transform:  translate($posX, $posY)
+	transform:          translate($posX, $posY)
+=transition($transition)
+	-webkit-transition: $transition
+	-moz-transition:    $transition
+	transition:         $transition
+
+.bordered
+	position: relative
+	padding: 70px 20px
+	border-top: none
+	border-left: 2px solid #000
+	border-right: 2px solid #000
+	border-bottom: 2px solid #000
+	
+	h1
+		width: 60%
+		position: absolute
+		top: -17px
+		left: 50%
+		+translate(-50%, -50%)
+
+	&.bordered_white
+		border-color: #fff
+		&::before,
+		&::after
+			border-color: #fff
+	&::before,
+	&::after
+		content: ""
+		width: 25%
+		position: absolute
+		top: 0
+		border-top: 2px solid #000
+	&::before
+		left: 0
+	&::after
+		right: 0
+		
+
+// GRID //
+
+[class*="col-"]
+	float: left
+	min-height: 1px
+	padding: 12px
+
+.col-1
+	width: 8.33%
+.col-2
+	width: 16.66%
+.col-3
+	width: 25%
+.col-4
+	width: 33.33%
+.col-5
+	width: 41.66%
+.col-6
+	width: 50%
+.col-7
+	width: 58.33%
+.col-8
+	width: 66.66%
+.col-9
+	width: 75%
+.col-10
+	width: 83.33%
+.col-11
+	width: 91.66%
+.col-12
+	width: 100%
+
+.col-offset-1
+	margin-left: 8.33%
+.col-offset-2
+	margin-left: 16.66%
+.col-offset-3
+	margin-left: 25%
+.col-offset-4
+	margin-left: 33.33%
+.col-offset-5
+	margin-left: 41.66%
+.col-offset-7
+	margin-left: 50%
+.col-offset-8
+	margin-left: 66.66%
+.col-offset-9
+	margin-left: 75%
+.col-offset-10
+	margin-left: 83.33%
+.col-offset-11
+	margin-left: 91.66%
+.col-offset-12
+	margin-left: 100%
+
+// SEKCJA POWITALNA //
+
+.hero
+	background: url("img/layer-8.png")
+	background-position: center
+	background-attachment: fixed
+	background-repeat: no-repeat
+	overflow: hidden
+	object-fit: cover
+	height: 100vh
+	width: 100%
+
+	.slogan
+		text-align: center
+		text-transform: uppercase
+		color: #fff
+		margin-top: 250px
+
+		h1
+			font-size: 54px
+			font-style: bold
+			font-weight: 700
+
+		p
+			font-size: 15px
+			font-style: regular
+
+.scroller
+	position: absolute
+	bottom: 30px
+	left: 50%
+	+translate(-50%, 0)
+
+	.scroll
+		display: block
+		width: 26px
+		height: 40px
+		border: 2px solid #fff
+		border-radius: 13px
+		position: relative
+		&.scroll-dark
+			border-color: #000
+			&::after
+				background: #000
+		&::after
+			content: ""
+			position: absolute
+			width: 6px
+			height: 6px
+			background: #fff
+			top: 6px
+			left: calc(40%)
+			border-radius: 50px
+			+transition(.4s)
+		&:hover
+			&::after
+				top: 25px
+
+// SEKCJA ABOUT US //
+
+#about
+	text-align: center
+	color: #3c3c3c
+	padding: 10vh 0 8vh 0
+
+	h1
+		font-size: 34px
+		font-style: bold
+		font-weight: 700
+		letter-spacing: 5px
+		margin-top: 20px
+		margin-bottom: 10px
+		-webkit-margin-before: 0.83em
+		-webkit-margin-after: 0.83em
+		-webkit-margin-start: 0
+		-webkit-margin-end: 0
+
+
+// SEKCJA SERVICES //
+
+.services
+	background: url("img/layer-4.png")
+	width: 100%
+	height: 488px
+
+	.services_information
+		margin: 120px 0 120px 0
+		text-align: center
+		color: #fff
+
+		h1
+			text-transform: uppercase
+			font-size: 34px
+			font-style: bold
+			font-weight: 700
+
+		p
+			font-size: 16px
+			font-style: light
+			font-weight: 300
+
+// SEKCJA WHAT WE DO //
+.what
+	padding-top: 10vh
+	padding-bottom: 10vh
+.what_head
+	text-align: center
+	color: #3c3c3c
+
+	h1
+		text-transform: uppercase
+		font-size: 34px
+		font-style: bold
+		font-weight: 700
+
+	h2
+		font-size: 20px
+		font-family: 'Lato'
+		font-style: bold
+		font-weight: 700
+		text-transform: uppercase
+
+	p
+		font-size: 14px
+		font-style: light
+		font-weight: 300
+
+// SEKCJA Z OBRAZKAMI //
+
+.images
+	margin-bottom: -6px
+
+	img
+		width: 100%
+		height: 230px
+		object-fit: cover
+		padding: 1px 2px
+
+.title_box h1
+	text-transform: uppercase
+	color: #fff
+
+.images [class*="col-"]
+	margin: 0
+	padding: 0
+
+.picture
+	position: relative
+	&:hover .layer
+		display: block
+		color: #000
+		line-height: 200px
+
+.layer
+	width: 100%
+	height: 230px
+	position: absolute
+	background: rgba(0, 0, 0, 0.5)
+	text-align: center
+	display: none
+
+// SEKCJA CONTACT //
+
+.contact
+	text-align: center
+	color: #3c3c3c
+	padding-top: 10vh
+	padding-bottom: 10vh
+
+	h1
+		font-size: 30px
+		font-style: bold
+		font-weight: 700
+		text-transform: uppercase
+
+	p
+		font-size: 16px
+		font-style: light
+		font-weight: 300
+
+// FOOTER
+
+footer
+	text-align: center
+	font-size: 14px
+	font-style: regular
+	font-weight: 400
+
+// MOBILE
+
+@media (max-width: 850px)
+	.col-m-1 
+		width: 8.33%
+	.col-m-2
+		width: 16.66%
+	.col-m-3
+		width: 25%
+	.col-m-4 
+		width: 33.33%
+	.col-m-5 
+		width: 41.66%
+	.col-m-6
+		width: 50%
+	.col-m-7 
+		width: 58.33%
+	.col-m-8 
+		width: 66.66%
+	.col-m-9 
+		width: 75%
+	.col-m-10
+		width: 83.33%
+	.col-m-11
+		width: 91.66%
+	.col-m-12 
+		width: 100%
