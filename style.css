@@ -247,7 +247,8 @@ section .container {
     width: 100%;
     display: block;
     height: 230px;
-    object-fit: cover; }
+    object-fit: cover;
+    padding: 0; }
 
 .title_box h1 {
   text-transform: uppercase;
