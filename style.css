@@ -245,6 +245,7 @@ section .container {
   margin-bottom: -6px; }
   .images img {
     width: 100%;
+    display: block;
     height: 230px;
     object-fit: cover; }
 
