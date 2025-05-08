@@ -150,6 +150,9 @@ section .container {
     .hero .slogan p {
       font-size: 15px;
       font-style: regular; }
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip; }
 
 .scroller {
   position: absolute;
